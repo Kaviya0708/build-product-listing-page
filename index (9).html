@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Listing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* Header */
+.header{
+    background:#111827;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.search-box{
+    width:350px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+/* Filter Bar */
+.filter-bar{
+    background:white;
+    padding:20px 50px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.filter-bar select{
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+/* Products */
+.products{
+    max-width:1300px;
+    margin:30px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.product-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+.product-image{
+    width:100%;
+    height:220px;
+    background:#dbeafe;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+}
+
+.product-content{
+    padding:20px;
+}
+
+.product-title{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.product-desc{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.price{
+    color:#2563eb;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .filter-bar{
+        padding:20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="logo">ShopHub</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+    </div>
+</div>
+
+<!-- Filters -->
+<div class="filter-bar">
+    <select>
+        <option>All Categories</option>
+        <option>Electronics</option>
+        <option>Fashion</option>
+        <option>Home</option>
+    </select>
+
+    <select>
+        <option>Sort By</option>
+        <option>Price Low to High</option>
+        <option>Price High to Low</option>
+        <option>Newest</option>
+    </select>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+    <div class="product-card">
+        <div class="product-image">📱</div>
+        <div class="product-content">
+            <div class="product-title">Smartphone Pro</div>
+            <div class="product-desc">
+                Latest smartphone with powerful features.
+            </div>
+            <div class="price">$799</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">💻</div>
+        <div class="product-content">
+            <div class="product-title">Laptop Ultra</div>
+            <div class="product-desc">
+                High-performance laptop for professionals.
+            </div>
+            <div class="price">$1,299</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">⌚</div>
+        <div class="product-content">
+            <div class="product-title">Smart Watch</div>
+            <div class="product-desc">
+                Track fitness and stay connected anywhere.
+            </div>
+            <div class="price">$199</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">🎧</div>
+        <div class="product-content">
+            <div class="product-title">Wireless Headphones</div>
+            <div class="product-desc">
+                Premium sound quality with noise cancellation.
+            </div>
+            <div class="price">$149</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">📷</div>
+        <div class="product-content">
+            <div class="product-title">Digital Camera</div>
+            <div class="product-desc">
+                Capture stunning photos and videos.
+            </div>
+            <div class="price">$599</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">🖥️</div>
+        <div class="product-content">
+            <div class="product-title">Gaming Monitor</div>
+            <div class="product-desc">
+                Ultra-smooth display for gaming enthusiasts.
+            </div>
+            <div class="price">$349</div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
